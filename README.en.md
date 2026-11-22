@@ -2,36 +2,27 @@
 
 [简体中文](./README.md) · English
 
-A Fabric helper for RongMC test worlds. It supports automated checks and local game control to make transport and client issues reproducible.
 
-## Download and installation
+A Fabric utility for checking modded blocks, screens and placement in isolated Minecraft instances. It can exercise interactions in game, inspect the client state and capture screenshots for repeatable test cases.
 
-- Version · [v1.0.0+26.3](https://github.com/OpenRongMC/MTR-Test-Control/releases/tag/v1.0.0%2B26.3) (Release)
-- Release asset · `mtr-test-control-1.0.0.26.3.jar`
-- Runtime · Minecraft Java 26.3, Fabric, Java 25
-- Fabric Loader · `>=0.19.3`
-- Fabric mod ID · `mtr_test_control`
-- Dependencies declared by the JAR · [Fabric API](https://modrinth.com/mod/fabric-api)
+## What changed in the RongMC 26.3 port
 
-Place the release JAR in the instance’s `mods/` directory. Use it in isolated test instances. Keep control interfaces accessible only locally and follow the command permission requirements. Read the original command and control documentation before installing.
+This 26.3 build adapts the helper to the current Fabric interfaces. Its controls are intended for isolated test instances.
 
-## How to try it
+## Installation
 
-Run a read-only status check in a disposable test world before executing a scenario. Remove any control credentials from reports.
+Download **v1.0.0+26.3** from [GitHub Releases](https://github.com/OpenRongMC/MTR-Test-Control/releases/tag/v1.0.0%2B26.3) for Minecraft Java **26.3** on **Fabric** with **Java 25**. Dependencies include [Fabric API](https://modrinth.com/mod/fabric-api). Place the release JAR in the instance’s `mods/` directory. Use it in isolated test instances. Keep control interfaces accessible only locally and follow the command permission requirements. Read the original command and control documentation before installing.
 
-## Working from source
+## In-game commands
 
-```sh
-./gradlew tasks
-```
+- `/mtrtest help` opens the test-command reference.
+- `/ngntest help` selects the NeoGuanniao test set.
+- `/aerotest help` selects the Aeronautics test set. Its default suite covers both Aeronautics and Simulated content.
 
-Inspect the tasks available in this checkout with Java 25 before selecting a build task.
+## Local test control
 
-## Documentation and support
+The local interfaces expose state inspection and model checks, and can drive test interactions such as inventory access, block use, GUI input or screenshots. Use the [complete command and local-control reference](./README.md) for the endpoint configuration, authorization and test boundaries. Keep test controls loopback-only and use disposable worlds.
 
-- [Previous README (historical guide, contributors and credits)](https://github.com/OpenRongMC/MTR-Test-Control/blob/addf1a7bff7f948cc0150a3cbdee4f64737bba07/README.md)
-- [Report a RongMC port issue](https://github.com/OpenRongMC/MTR-Test-Control/issues) · Include the game version, client and server JAR names, reproduction steps and relevant logs.
+## License
 
-## License and credits
-
-See this repository’s [LICENSE](./LICENSE) and the original project’s license, credits and third-party asset notices.
+See [LICENSE](./LICENSE).
