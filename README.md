@@ -90,7 +90,7 @@ curl -H "X-MTR-Test-Token: TOKEN" 'http://127.0.0.1:PORT/inspect?x=0&y=64&z=0'
 
 核心项目 `tools/client_test_api.py` 提供本机测试调用助手，从当前日志读取临时端点，不把 token 写进脚本。只对 `fabric/run/` 的隔离测试世界和 `fabric/client-run/` 操作。`/command` 的 accepted 仅表示命令已提交，不保证命令执行或客户端界面已经成功。
 
-## Agent：完整 Aeronautics 套件
+## Aeronautics 套件（历史 1.21.11 测试流程）
 
 1. 启动带 `mtr_test_control`、Create Aeronautics（`aeronautics` + `simulated`）的隔离 Fabric 1.21.11 服务器，一名玩家在线并位于可放置方块的平坦区域。
 2. 从日志读取 `Local test control listening at http://127.0.0.1:PORT with token ...`。
