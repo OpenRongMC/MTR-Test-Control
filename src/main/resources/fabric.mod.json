@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "mtr_test_control",
+  "version": "${version}",
+  "name": "RongMC Test Control",
+  "description": "Local control for isolated Fabric 26.3 tests (MTR, NeoGuanNiao, Create Aeronautics, etc.). Commands: /mtrtest, /ngntest, /aerotest.",
+  "authors": [
+    "RongMC Update"
+  ],
+  "license": "GPL-3.0",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "org.mtr.testcontrol.MtrTestControl"
+    ],
+    "client": [
+      "org.mtr.testcontrol.ClientTestControl"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "java": ">=25",
+    "minecraft": "26.3",
+    "fabric-api": "*"
+  }
+}
